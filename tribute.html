@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. A.P.J. Abdul Kalam | Tribute Page</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.7;
+    color:#222;
+    background:#f5f7fa;
+}
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:#071b35;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:14px 10px;
+    box-shadow:0 3px 12px #0004;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:5px 14px;
+    font-weight:bold;
+    font-size:14px;
+}
+nav a:hover{color:#ffb703}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:100px 20px 60px;
+    background:
+    linear-gradient(#061a32dd,#0b426dcc),
+    url("https://upload.wikimedia.org/wikipedia/commons/2/2e/A._P._J._Abdul_Kalam.jpg")
+    center/cover;
+}
+.hero-content{max-width:1000px}
+.hero h1{
+    font-size:clamp(45px,8vw,90px);
+    letter-spacing:2px;
+    text-shadow:3px 4px 8px #000;
+}
+.hero h2{
+    color:#ffb703;
+    font-size:clamp(22px,4vw,38px);
+    margin:10px 0;
+}
+.hero p{
+    max-width:800px;
+    margin:20px auto;
+    font-size:20px;
+}
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 28px;
+    border-radius:30px;
+    background:#ffb703;
+    color:#071b35;
+    text-decoration:none;
+    font-weight:bold;
+}
+.btn:hover{background:white}
+
+section{
+    padding:80px 8%;
+}
+.section-title{
+    text-align:center;
+    color:#073b6f;
+    font-size:38px;
+    margin-bottom:40px;
+}
+.section-title span{color:#ff9800}
+.container{max-width:1200px;margin:auto}
+
+.intro{
+    background:white;
+    text-align:center;
+}
+.intro p{
+    max-width:1000px;
+    margin:auto;
+    font-size:18px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+.card{
+    background:white;
+    padding:28px;
+    border-radius:15px;
+    box-shadow:0 5px 20px #0001;
+    border-top:5px solid #0b5fa5;
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px #0002;
+}
+.card h3{
+    color:#073b6f;
+    margin-bottom:10px;
+    font-size:22px;
+}
+.card p{font-size:15px}
+
+.about{
+    background:#eaf3fa;
+}
+.about-content{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    align-items:center;
+}
+.about-img{
+    text-align:center;
+}
+.about-img img{
+    width:100%;
+    max-width:370px;
+    border-radius:20px;
+    box-shadow:0 8px 25px #0003;
+}
+.about-text p{margin-bottom:15px}
+
+.timeline{
+    background:#071b35;
+    color:white;
+}
+.timeline .section-title{color:white}
+.timeline-box{
+    max-width:900px;
+    margin:auto;
+    border-left:4px solid #ffb703;
+    padding-left:30px;
+}
+.event{
+    position:relative;
+    margin-bottom:35px;
+    background:#ffffff12;
+    padding:20px;
+    border-radius:10px;
+}
+.event::before{
+    content:"";
+    position:absolute;
+    width:16px;
+    height:16px;
+    background:#ffb703;
+    border-radius:50%;
+    left:-40px;
+    top:27px;
+}
+.event h3{color:#ffb703}
+
+.contributions{
+    background:white;
+}
+.contribution-card{
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:20px;
+    align-items:start;
+    padding:25px;
+    margin:18px 0;
+    border-radius:12px;
+    background:#f3f7fb;
+    border-left:6px solid #0b5fa5;
+}
+.icon{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#073b6f;
+    color:#ffb703;
+    font-size:28px;
+    font-weight:bold;
+}
+.contribution-card h3{color:#073b6f}
+
+.roles{
+    background:#edf4f8;
+}
+.role{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px #0001;
+}
+.role h3{color:#0b5fa5}
+
+.achievements{
+    background:white;
+}
+.achievement{
+    text-align:center;
+    padding:30px 20px;
+    background:#f7f9fb;
+    border-radius:15px;
+    border-bottom:5px solid #ffb703;
+}
+.achievement .number{
+    font-size:42px;
+    font-weight:bold;
+    color:#073b6f;
+}
+.achievement h3{margin:10px 0;color:#222}
+
+.books{
+    background:#eaf3fa;
+}
+.book{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px #0001;
+}
+.book h3{color:#073b6f}
+.book em{color:#777}
+
+.awards{
+    background:white;
+}
+.award-list{
+    max-width:950px;
+    margin:auto;
+}
+.award{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    padding:18px;
+    margin:12px 0;
+    border-radius:10px;
+    background:#f4f7fa;
+}
+.award-year{
+    min-width:90px;
+    text-align:center;
+    padding:8px;
+    border-radius:20px;
+    background:#073b6f;
+    color:white;
+    font-weight:bold;
+}
+
+.quotes{
+    background:linear-gradient(135deg,#073b6f,#0b5fa5);
+    color:white;
+}
+.quotes .section-title{color:white}
+.quote-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+.quote{
+    background:#ffffff12;
+    border:1px solid #ffffff33;
+    padding:30px;
+    border-radius:15px;
+}
+.quote p{
+    font-size:19px;
+    font-style:italic;
+}
+.quote span{
+    display:block;
+    margin-top:15px;
+    color:#ffb703;
+    font-weight:bold;
+}
+
+.values{
+    background:#fff;
+}
+.value{
+    text-align:center;
+    padding:30px 20px;
+}
+.value-icon{
+    font-size:45px;
+    margin-bottom:12px;
+}
+.value h3{color:#073b6f}
+
+.message{
+    background:#ffb703;
+    text-align:center;
+}
+.message h2{
+    color:#071b35;
+    font-size:35px;
+    margin-bottom:20px;
+}
+.message p{
+    max-width:900px;
+    margin:auto;
+    font-size:20px;
+    color:#222;
+}
+
+footer{
+    background:#071b35;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+footer h2{color:#ffb703;margin-bottom:10px}
+footer p{margin:8px 0;color:#ccd6e0}
+
+@media(max-width:800px){
+    .about-content{grid-template-columns:1fr}
+    nav a{margin:4px 7px;font-size:12px}
+    section{padding:60px 5%}
+    .contribution-card{grid-template-columns:1fr}
+    .icon{margin:auto}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#life">Life</a>
+    <a href="#career">Career</a>
+    <a href="#contributions">Contributions</a>
+    <a href="#roles">Positions</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#awards">Awards</a>
+    <a href="#books">Books</a>
+    <a href="#quotes">Quotes</a>
+    <a href="#legacy">Legacy</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+    <div class="hero-content">
+        <h1>Dr. A.P.J. Abdul Kalam</h1>
+        <h2>The Missile Man of India</h2>
+        <p>
+            15 October 1931 – 27 July 2015
+        </p>
+        <p>
+            Scientist • Engineer • Teacher • Author • People's President
+        </p>
+        <a href="#about" class="btn">Explore His Journey ↓</a>
+    </div>
+</header>
+
+<!-- INTRODUCTION -->
+<section class="intro" id="about">
+<div class="container">
+    <h2 class="section-title">A Life of <span>Inspiration</span></h2>
+    <p>
+        Dr. Avul Pakir Jainulabdeen Abdul Kalam was one of India's most respected
+        scientists, educators, authors and public figures. He played a major role
+        in India's space and defence programmes and served as the 11th President
+        of India from 2002 to 2007. Known for his humility, discipline, scientific
+        vision and connection with students, he dedicated his life to the development
+        of India and to inspiring young people to dream, learn and contribute to
+        the nation.
+    </p>
+</div>
+</section>
+
+<!-- QUICK FACTS -->
+<section>
+<div class="container">
+<h2 class="section-title">Quick <span>Facts</span></h2>
+<div class="info-grid">
+
+<div class="card">
+<h3>Full Name</h3>
+<p>Avul Pakir Jainulabdeen Abdul Kalam</p>
+</div>
+
+<div class="card">
+<h3>Born</h3>
+<p>15 October 1931, Rameswaram, Tamil Nadu, India</p>
+</div>
+
+<div class="card">
+<h3>Education</h3>
+<p>Madras Institute of Technology – Aeronautical Engineering</p>
+</div>
+
+<div class="card">
+<h3>Known As</h3>
+<p>Missile Man of India and People's President</p>
+</div>
+
+<div class="card">
+<h3>President</h3>
+<p>11th President of the Republic of India</p>
+</div>
+
+<div class="card">
+<h3>Presidential Term</h3>
+<p>25 July 2002 – 25 July 2007</p>
+</div>
+
+<div class="card">
+<h3>Major Fields</h3>
+<p>Aerospace Engineering, Defence Technology and Space Research</p>
+</div>
+
+<div class="card">
+<h3>Passed Away</h3>
+<p>27 July 2015, Shillong, Meghalaya</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EARLY LIFE -->
+<section class="about" id="life">
+<div class="container">
+<h2 class="section-title">Early Life & <span>Education</span></h2>
+
+<div class="about-content">
+
+<div class="about-img">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/A._P._J._Abdul_Kalam.jpg"
+alt="Dr APJ Abdul Kalam">
+</div>
+
+<div class="about-text">
+<p>
+Dr. A.P.J. Abdul Kalam was born on 15 October 1931 in Rameswaram,
+Tamil Nadu. He came from a modest family and experienced a simple childhood.
+His father, Jainulabdeen, was a boat owner and imam, while his mother,
+Ashiamma, was a homemaker.
+</p>
+
+<p>
+As a young student, Kalam developed a strong interest in mathematics and
+science. His early life taught him the importance of discipline, hard work,
+self-reliance and perseverance.
+</p>
+
+<p>
+He studied physics at Saint Joseph's College, Tiruchirappalli, and later
+studied aeronautical engineering at the Madras Institute of Technology.
+His education laid the foundation for his future career in aerospace and
+defence technology.
+</p>
+
+<p>
+His journey from a small town in Tamil Nadu to the highest constitutional
+office in India became a powerful example of how education, determination
+and vision can transform a person's life.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline">
+<div class="container">
+<h2 class="section-title">Journey Through <span>Time</span></h2>
+
+<div class="timeline-box">
+
+<div class="event">
+<h3>1931 – Birth</h3>
+<p>Born on 15 October in Rameswaram, Tamil Nadu.</p>
+</div>
+
+<div class="event">
+<h3>1954 – Graduation</h3>
+<p>Completed his physics degree from Saint Joseph's College.</p>
+</div>
+
+<div class="event">
+<h3>1958 – Aeronautical Engineering</h3>
+<p>Completed aeronautical engineering at Madras Institute of Technology.</p>
+</div>
+
+<div class="event">
+<h3>1960 – DRDO</h3>
+<p>Joined the Aeronautical Development Establishment of India's Defence Research and Development Organisation.</p>
+</div>
+
+<div class="event">
+<h3>1960s – Space Research</h3>
+<p>Became associated with India's space research programme and worked on launch vehicle technology.</p>
+</div>
+
+<div class="event">
+<h3>1980 – SLV-3 Success</h3>
+<p>Under his leadership, SLV-3 successfully placed the Rohini satellite into near-Earth orbit.</p>
+</div>
+
+<div class="event">
+<h3>1980s–1990s – Defence Programme</h3>
+<p>Played a central role in India's Integrated Guided Missile Development Programme.</p>
+</div>
+
+<div class="event">
+<h3>1997 – Bharat Ratna</h3>
+<p>Received India's highest civilian award, the Bharat Ratna.</p>
+</div>
+
+<div class="event">
+<h3>2002 – President of India</h3>
+<p>Became the 11th President of India.</p>
+</div>
+
+<div class="event">
+<h3>2007 – Presidency Ends</h3>
+<p>Completed his five-year term and returned to teaching, writing and public service.</p>
+</div>
+
+<div class="event">
+<h3>2015 – Final Lecture</h3>
+<p>Passed away on 27 July 2015 after collapsing while delivering a lecture at IIM Shillong.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SCIENTIFIC CONTRIBUTIONS -->
+<section class="contributions" id="contributions">
+<div class="container">
+<h2 class="section-title">Major <span>Contributions</span></h2>
+
+<div class="contribution-card">
+<div class="icon">🚀</div>
+<div>
+<h3>India's Space Programme</h3>
+<p>
+Kalam worked with India's space research programme and contributed to
+the development of Satellite Launch Vehicle technology. His work supported
+India's capability to independently launch satellites.
+</p>
+</div>
+</div>
+
+<div class="contribution-card">
+<div class="icon">🛰️</div>
+<div>
+<h3>SLV-3 Launch Vehicle</h3>
+<p>
+He served as Project Director for the SLV-3 programme. The successful
+1980 launch placed the Rohini satellite into orbit and represented an
+important milestone in India's space programme.
+</p>
+</div>
+</div>
+
+<div class="contribution-card">
+<div class="icon">🎯</div>
+<div>
+<h3>Integrated Guided Missile Development Programme</h3>
+<p>
+Kalam was a leading figure in India's missile development programme.
+The programme contributed to the development of indigenous missile
+systems including Prithvi, Agni, Akash, Trishul and Nag.
+</p>
+</div>
+</div>
+
+<div class="contribution-card">
+<div class="icon">🛡️</div>
+<div>
+<h3>Defence Technology</h3>
+<p>
+Through his work at DRDO, Kalam contributed to strengthening India's
+indigenous defence technology capabilities and encouraged technological
+self-reliance.
+</p>
+</div>
+</div>
+
+<div class="contribution-card">
+<div class="icon">🇮🇳</div>
+<div>
+<h3>Technology Vision for India</h3>
+<p>
+Kalam strongly advocated the use of science and technology for national
+development. He was associated with Technology Vision 2020, a long-term
+vision for transforming India into a developed nation.
+</p>
+</div>
+</div>
+
+<div class="contribution-card">
+<div class="icon">👨‍🎓</div>
+<div>
+<h3>Education and Youth Development</h3>
+<p>
+After his scientific and presidential career, Kalam spent considerable
+time interacting with students and teaching at educational institutions.
+He encouraged young people to develop ambitious goals and contribute
+to society.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CAREER -->
+<section id="career">
+<div class="container">
+<h2 class="section-title">Scientific <span>Career</span></h2>
+
+<div class="info-grid">
+
+<div class="card">
+<h3>DRDO</h3>
+<p>
+Kalam joined DRDO in 1960 and worked on aerospace and defence-related
+projects. His early professional experience introduced him to India's
+indigenous technology development efforts.
+</p>
+</div>
+
+<div class="card">
+<h3>ISRO</h3>
+<p>
+He became associated with the Indian Space Research Organisation and
+served as Project Director of the Satellite Launch Vehicle-3 programme.
+</p>
+</div>
+
+<div class="card">
+<h3>SLV-3</h3>
+<p>
+The successful 1980 SLV-3 mission made India capable of placing the
+Rohini satellite into orbit using an Indian launch vehicle.
+</p>
+</div>
+
+<div class="card">
+<h3>Defence Research</h3>
+<p>
+He returned to DRDO and became a major figure in India's missile
+development and defence technology programmes.
+</p>
+</div>
+
+<div class="card">
+<h3>Scientific Adviser</h3>
+<p>
+Kalam served as Scientific Adviser to the Defence Minister and Secretary
+of the Department of Defence Research and Development.
+</p>
+</div>
+
+<div class="card">
+<h3>Principal Scientific Adviser</h3>
+<p>
+He later served as Principal Scientific Adviser to the Government of India,
+contributing to national science and technology policy.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- POSITIONS -->
+<section class="roles" id="roles">
+<div class="container">
+<h2 class="section-title">Important <span>Positions</span></h2>
+
+<div class="info-grid">
+
+<div class="role">
+<h3>Scientist – DRDO</h3>
+<p>Worked on defence and aerospace technology projects during his early career.</p>
+</div>
+
+<div class="role">
+<h3>ISRO Project Director</h3>
+<p>Led the SLV-3 project that successfully launched the Rohini satellite.</p>
+</div>
+
+<div class="role">
+<h3>Director – DRDL</h3>
+<p>Led the Defence Research and Development Laboratory during India's missile development efforts.</p>
+</div>
+
+<div class="role">
+<h3>Scientific Adviser to Defence Minister</h3>
+<p>Provided scientific and technological leadership for defence programmes.</p>
+</div>
+
+<div class="role">
+<h3>Principal Scientific Adviser</h3>
+<p>Advised the Government of India on science and technology-related matters.</p>
+</div>
+
+<div class="role">
+<h3>11th President of India</h3>
+<p>Served as President of India from 2002 to 2007.</p>
+</div>
+
+<div class="role">
+<h3>Teacher & Professor</h3>
+<p>After his presidency, he taught and interacted extensively with students across India.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="achievements" id="achievements">
+<div class="container">
+<h2 class="section-title">Major <span>Achievements</span></h2>
+
+<div class="info-grid">
+
+<div class="achievement">
+<div class="number">01</div>
+<h3>SLV-3 Success</h3>
+<p>Played a leading role in India's successful indigenous satellite launch vehicle programme.</p>
+</div>
+
+<div class="achievement">
+<div class="number">02</div>
+<h3>Missile Programme</h3>
+<p>Key leadership role in India's Integrated Guided Missile Development Programme.</p>
+</div>
+
+<div class="achievement">
+<div class="number">03</div>
+<h3>Technology Vision 2020</h3>
+<p>Promoted a long-term national vision based on science, technology and development.</p>
+</div>
+
+<div class="achievement">
+<div class="number">04</div>
+<h3>Presidency</h3>
+<p>Became the 11th President of India and became especially popular among students and young people.</p>
+</div>
+
+<div class="achievement">
+<div class="number">05</div>
+<h3>Author</h3>
+<p>Wrote several influential books about science, leadership, education and his life.</p>
+</div>
+
+<div class="achievement">
+<div class="number">06</div>
+<h3>Inspiration</h3>
+<p>Inspired millions of students to pursue education, scientific thinking and national development.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- AWARDS -->
+<section class="awards" id="awards">
+<div class="container">
+<h2 class="section-title">Awards & <span>Honours</span></h2>
+
+<div class="award-list">
+
+<div class="award">
+<div class="award-year">1981</div>
+<div><strong>Padma Bhushan</strong><br>One of India's major civilian honours.</div>
+</div>
+
+<div class="award">
+<div class="award-year">1990</div>
+<div><strong>Padma Vibhushan</strong><br>India's second-highest civilian honour.</div>
+</div>
+
+<div class="award">
+<div class="award-year">1997</div>
+<div><strong>Bharat Ratna</strong><br>India's highest civilian award.</div>
+</div>
+
+<div class="award">
+<div class="award-year">1997</div>
+<div><strong>Indira Gandhi Award for National Integration</strong></div>
+</div>
+
+<div class="award">
+<div class="award-year">2000</div>
+<div><strong>Ramanujan Award</strong><br>Recognition associated with his contributions and influence in science and technology.</div>
+</div>
+
+<div class="award">
+<div class="award-year">2007</div>
+<div><strong>King Charles II Medal</strong><br>Awarded by the Royal Society, London.</div>
+</div>
+
+<div class="award">
+<div class="award-year">2013</div>
+<div><strong>Von Braun Award</strong><br>Recognised for leadership in space-related activities.</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- BOOKS -->
+<section class="books" id="books">
+<div class="container">
+<h2 class="section-title">Books Written by <span>Dr. Kalam</span></h2>
+
+<div class="info-grid">
+
+<div class="book">
+<h3>Wings of Fire</h3>
+<em>An Autobiography</em>
+<p>
+An autobiographical account describing his childhood, education, scientific
+career and journey through India's space and defence programmes.
+</p>
+</div>
+
+<div class="book">
+<h3>Ignited Minds</h3>
+<em>Unleashing the Power Within India</em>
+<p>
+A book focused on India's youth, education, creativity and the potential
+of young minds to contribute to national development.
+</p>
+</div>
+
+<div class="book">
+<h3>India 2020</h3>
+<em>A Vision for the New Millennium</em>
+<p>
+Presents a vision for India's technological, economic and social development
+and its journey toward becoming a developed nation.
+</p>
+</div>
+
+<div class="book">
+<h3>My Journey</h3>
+<em>Transforming Dreams into Actions</em>
+<p>
+A collection of experiences and lessons from different stages of his life.
+</p>
+</div>
+
+<div class="book">
+<h3>Turning Points</h3>
+<em>A Journey Through Challenges</em>
+<p>
+Discusses important moments, decisions and experiences from his public life.
+</p>
+</div>
+
+<div class="book">
+<h3>Indomitable Spirit</h3>
+<em>Thoughts and Ideas</em>
+<p>
+A collection of ideas and reflections concerning leadership, education,
+science and the future of India.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- QUOTES -->
+<section class="quotes" id="quotes">
+<div class="container">
+<h2 class="section-title">Words of <span>Wisdom</span></h2>
+
+<div class="quote-grid">
+
+<div class="quote">
+<p>
+“Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.”
+</p>
+<span>— Dr. A.P.J. Abdul Kalam</span>
+</div>
+
+<div class="quote">
+<p>
+“Dream is not that which you see while sleeping, it is something that does not let you sleep.”
+</p>
+<span>— Dr. A.P.J. Abdul Kalam</span>
+</div>
+
+<div class="quote">
+<p>
+“All of us do not have equal talent. But all of us have an equal opportunity to develop our talents.”
+</p>
+<span>— Dr. A.P.J. Abdul Kalam</span>
+</div>
+
+<div class="quote">
+<p>
+“If you want to shine like a sun, first burn like a sun.”
+</p>
+<span>— Dr. A.P.J. Abdul Kalam</span>
+</div>
+
+<div class="quote">
+<p>
+“Excellence is a continuous process and not an accident.”
+</p>
+<span>— Dr. A.P.J. Abdul Kalam</span>
+</div>
+
+<div class="quote">
+<p>
+“Thinking should become your capital asset, no matter whatever ups and downs you come across in your life.”
+</p>
+<span>— Dr. A.P.J. Abdul Kalam</span>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+<div class="container">
+<h2 class="section-title">Values He <span>Represented</span></h2>
+
+<div class="info-grid">
+
+<div class="value">
+<div class="value-icon">🎯</div>
+<h3>Vision</h3>
+<p>He encouraged people to imagine a better future and work toward it.</p>
+</div>
+
+<div class="value">
+<div class="value-icon">📚</div>
+<h3>Education</h3>
+<p>He believed education could empower individuals and transform society.</p>
+</div>
+
+<div class="value">
+<div class="value-icon">💡</div>
+<h3>Innovation</h3>
+<p>He promoted scientific thinking, creativity and technological development.</p>
+</div>
+
+<div class="value">
+<div class="value-icon">🤝</div>
+<h3>Humility</h3>
+<p>Despite his achievements, he was widely known for his simple lifestyle and approachable nature.</p>
+</div>
+
+<div class="value">
+<div class="value-icon">🇮🇳</div>
+<h3>National Development</h3>
+<p>He devoted much of his career to strengthening India's scientific and technological capabilities.</p>
+</div>
+
+<div class="value">
+<div class="value-icon">👨‍🎓</div>
+<h3>Youth Empowerment</h3>
+<p>He constantly encouraged students to dream big and take responsibility for India's future.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- LEGACY -->
+<section class="message" id="legacy">
+<div class="container">
+<h2>A Legacy That Continues</h2>
+<p>
+Dr. A.P.J. Abdul Kalam left behind more than scientific achievements.
+He left a vision of an educated, innovative and developed India. His life
+continues to inspire students, scientists, engineers, teachers and citizens
+to dream with purpose and transform those dreams into meaningful action.
+</p>
+<br>
+<p>
+<strong>His greatest message was simple: dream big, work hard, learn continuously,
+and use knowledge for the betterment of society.</strong>
+</p>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<h2>Dr. A.P.J. Abdul Kalam</h2>
+<p>1931 – 2015</p>
+<p>Scientist • Engineer • Teacher • Author • President • Inspiration</p>
+<p>“Dream. Transform. Achieve.”</p>
+<br>
+<p>© Tribute Page | Created with respect and admiration</p>
+</footer>
+
+</body>
+</html>
